@@ -20,15 +20,18 @@ dependencies {
 }
 
 test {
-    
+
 //    https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html
-    
+
     dependsOn(clean)
-    useJUnitPlatform()
+    useJUnitPlatform{
+        includeTags 'localhost'
+        excludeTags 'slow'
+    }
     testLogging {
         events "passed", "skipped", "failed"
     }
-    
+
     // set heap size for the test JVM(s)
     minHeapSize = "128m"
     maxHeapSize = "512m"
