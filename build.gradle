@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
-        classpath 'io.qameta.allure:allure-gradle:2.4'
+        classpath 'io.qameta.allure:allure-gradle:2.5'
     }
 }
 
